@@ -27,7 +27,7 @@ CREATE TABLE Cursos (
 CREATE TABLE Lecciones (
     id_leccion INT PRIMARY KEY AUTO_INCREMENT,
     descripcion VARCHAR(100) NOT NULL,
-    duracion TIME UNSIGNED NOT NULL,
+    duracion TIME NOT NULL,
     id_curso INT NOT NULL,
     FOREIGN KEY (id_curso) REFERENCES Cursos(id_curso) ON UPDATE CASCADE
 );
@@ -37,14 +37,7 @@ CREATE TABLE Progreso (
     id_progreso INT PRIMARY KEY AUTO_INCREMENT,
     id_usuario INT NOT NULL,
     id_leccion INT NOT NULL,
-    id_curso INT NOT NULL,
     fecha_finalizacion DATE,
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON UPDATE CASCADE,
-    FOREIGN KEY (id_leccion) REFERENCES Lecciones(id_leccion) ON UPDATE CASCADE,
-    FOREIGN KEY (id_curso) REFERENCES cursos(id_curso) ON UPDATE CASCADE
+    FOREIGN KEY (id_leccion) REFERENCES Lecciones(id_leccion) ON UPDATE CASCADE 
 );
-
--- insertar una nueva tabla al campo progreso
-ALTER TABLE Progreso
-ADD COLUMN id_curso INT NOT NULL,
-ADD FOREIGN KEY (id_curso) REFERENCES Cursos(id_curso) ON UPDATE CASCADE;
