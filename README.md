@@ -31,8 +31,8 @@ Este repositorio contiene una base de datos creada con MySQL para una pagina web
 
 ## links
 
-https://trello.com/b/Q57uAI80/cursos-online
-https://github.com/FF5-DW1/ej4_granMurallaChina
+- https://trello.com/b/Q57uAI80/cursos-online
+- https://github.com/FF5-DW1/ej4_granMurallaChina
 
 
 ## PARTICIPANTES
